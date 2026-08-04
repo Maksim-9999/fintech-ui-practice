@@ -26,9 +26,9 @@ const toggleMenu = () => {
       closeMenu();
     });
 
-    function removeItem(item) {
+    const removeItem = (item) => {
       item.classList.remove("active");
-    }
+    };
     items.forEach((item) => {
       item.addEventListener("click", () => {
         if (item.classList.contains("active")) {

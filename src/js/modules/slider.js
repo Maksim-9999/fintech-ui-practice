@@ -10,7 +10,7 @@ import buynlarge from "/src/img/partners/buynlarge.png";
 
 const images = [rusteze, dinoco1, planetpizza, buynlarge];
 //Slider partners
-function slider() {
+const slider = () => {
   try {
     const swiper = new Swiper(".partners-swiper", {
       modules: [Scrollbar, Mousewheel],
@@ -131,6 +131,6 @@ function slider() {
       },
     });
   } catch (e) {}
-}
+};
 
 export default slider;

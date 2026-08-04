@@ -1,6 +1,6 @@
 import { closeModal } from "./modal";
 
-function forms() {
+const forms = () => {
   try {
     const forms = document.querySelectorAll("form");
     forms.forEach((item) => {
@@ -21,20 +21,7 @@ function forms() {
         failModal.classList.remove("show");
       }, 3000);
     };
-    // const postData = (url, data) => {
-    //   const isSuccess = true; // переключай вручную true/false для теста
 
-    //   return new Promise((resolve, reject) => {
-    //     setTimeout(() => {
-    //       console.log("Отправленные данные:", data);
-    //       if (isSuccess) {
-    //         resolve({ message: "ok" });
-    //       } else {
-    //         reject(new Error("Мок: имитация ошибки сервера"));
-    //       }
-    //     }, 500);
-    //   });
-    // };
     const postData = (url, data) => {
       return fetch(url, {
         method: "POST",
@@ -45,7 +32,7 @@ function forms() {
       });
     };
 
-    function bindPostData(form) {
+    const bindPostData = (form) => {
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
@@ -68,10 +55,10 @@ function forms() {
             showFail();
           });
       });
-    }
+    };
   } catch (e) {
     console.error(e);
   }
-}
+};
 
 export default forms;
