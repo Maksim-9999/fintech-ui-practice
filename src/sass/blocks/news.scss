@@ -1,0 +1,124 @@
+.news {
+  .new-block {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
+  .new-links {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    list-style-type: none;
+  }
+  .card {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    row-gap: 10px;
+    padding: 20px;
+    min-height: 320px;
+    text-decoration: none;
+    color: #fff;
+    .title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 156%;
+    }
+    .text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 129%;
+    }
+  }
+  .lotpeople {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0c0c0c 100%),
+      url(/src/img/news_cards/news1.jpg) center / cover no-repeat;
+  }
+  .phone {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0c0c0c 100%),
+      url(/src/img/news_cards/news2.jpg) center / cover no-repeat;
+  }
+  .headphone {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0c0c0c 100%),
+      url(/src/img/news_cards/news3.jpg) center / cover no-repeat;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .news {
+    .new-block {
+      margin-top: 35px;
+      row-gap: 20px;
+    }
+    .card {
+      padding: 30px;
+      .title {
+        font-size: 20px;
+        line-height: 140%;
+      }
+      .text {
+        font-size: 16px;
+        line-height: 138%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .news {
+    .new-block {
+      margin-top: 40px;
+      row-gap: 40px;
+    }
+    .new-links {
+      flex-direction: row;
+      column-gap: 20px;
+      a {
+        &:hover {
+          transition: all 0.4s;
+          transform: scale(1.06);
+        }
+      }
+      li {
+        width: calc(33% - 10px);
+      }
+    }
+    .card {
+      width: 100%;
+      padding: 30px;
+      .title {
+        font-size: 20px;
+        line-height: 140%;
+      }
+      .text {
+        font-size: 16px;
+        line-height: 138%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .news {
+    .new-block {
+      margin-top: 71px;
+      row-gap: 52px;
+    }
+    .new-links {
+      a {
+        min-height: 457px;
+      }
+    }
+    .card {
+      .title {
+        font-size: 22px;
+        line-height: 127%;
+      }
+    }
+  }
+}

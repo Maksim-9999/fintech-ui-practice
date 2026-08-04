@@ -1,0 +1,207 @@
+.footer {
+  margin-top: 60px;
+  background: #181719;
+  &-wrapper {
+    padding: 35px 20px 35px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 25px;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .footer-block {
+      padding-bottom: 10px;
+      position: relative;
+      width: 50%;
+
+      .footer-title {
+        position: relative;
+        padding-bottom: 20px;
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: 10px;
+          background: #353636;
+          width: 100%;
+          height: 1px;
+        }
+      }
+    }
+
+    .about_us {
+      width: 100%;
+    }
+
+    .contact {
+      &-elem {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .img {
+          width: 15px;
+          height: 15px;
+          flex-shrink: 0;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: #000;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+  .bottom-wrapper {
+    padding: 30px 50px 20px 50px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #fff;
+    z-index: 1;
+    .social_list {
+      order: 3;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      list-style-type: none;
+      li {
+        a {
+          display: block;
+          width: 24px;
+          height: 24px;
+        }
+        .facebook {
+          background: url(/src/img/social_icons/facebook.svg) center center/
+            cover no-repeat;
+        }
+        .linkedin {
+          background: url(/src/img/social_icons/lindekin.svg) center center/
+            cover no-repeat;
+        }
+      }
+    }
+    .policy {
+      order: 2;
+      display: flex;
+      gap: 20px;
+    }
+    .copyrigth {
+      order: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    margin-top: 80px;
+
+    &-wrapper {
+      padding: 35px 40px 20px 40px;
+      .footer-block {
+        width: 30%;
+      }
+      .solution {
+        width: 40%;
+        .list {
+          columns: 2;
+          padding-right: 15px;
+        }
+      }
+      .contact {
+        width: 70%;
+      }
+    }
+    .footer-bottom {
+      .bottom-wrapper {
+        padding: 20px 40px;
+        flex-direction: row;
+        justify-content: space-between;
+        .copyrigth {
+          order: 1;
+        }
+        .policy {
+          order: 2;
+        }
+        .social {
+          order: 3;
+          a {
+            width: 26px;
+            height: 26px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer {
+    &-wrapper {
+      padding: 50px 100px;
+      .footer-block {
+        width: 18%;
+      }
+      .solution {
+        width: 28%;
+      }
+    }
+    .footer-bottom {
+      .bottom-wrapper {
+        padding: 20px 100px;
+        .social {
+          a {
+            width: 28px;
+            height: 28px;
+            &:hover {
+              transition: 0.4s;
+              transform: scale(1.3);
+            }
+          }
+          .facebook {
+            &:hover {
+              background: url(/src/img/social_icons/facebook-blue.svg) center
+                center/ cover no-repeat;
+            }
+          }
+          .linkedin {
+            &:hover {
+              background: url(/src/img/social_icons/linkedin-blue.svg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .footer {
+    &-wrapper {
+      padding: 50px 220px;
+    }
+    .footer-bottom {
+      .bottom-wrapper {
+        padding: 20px 220px;
+      }
+    }
+  }
+}

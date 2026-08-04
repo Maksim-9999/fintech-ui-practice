@@ -1,0 +1,17 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/partners", "destination": "/partners.html" },
+    { "source": "/solutions", "destination": "/solutions.html" },
+    { "source": "/news", "destination": "/news.html" },
+    { "source": "/404", "destination": "/404.html" },
+    { "source": "/insurance", "destination": "/insurance.html" },
+    { "source": "/news_item", "destination": "/news-article-1.html" },
+    { "source": "/news_item2", "destination": "/news-article-2.html" },
+    { "source": "/news_item3", "destination": "/news-article-3.html" },
+    { "source": "/privacy_policy", "destination": "/privacy_policy.html" },
+    { "source": "/security_policy", "destination": "/security_policy.html" }
+  ]
+}

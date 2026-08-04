@@ -1,0 +1,70 @@
+.main {
+  margin-top: 0px;
+  background: url(/src/img/main_bg/bg1980.png) center / cover no-repeat;
+  height: 685px;
+  .wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 35px;
+    color: #f1f1f1;
+  }
+  &-title {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 115%;
+    text-align: center;
+    span {
+      font-weight: 500;
+    }
+  }
+  &-subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 98%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main {
+    height: 675px;
+    .wrapper {
+      row-gap: 40px;
+    }
+    &-title {
+      font-size: 50px;
+      line-height: 125%;
+    }
+    &-subtitle {
+      font-size: 25px;
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main {
+    .wrapper {
+      row-gap: 45px;
+    }
+    &-title {
+      font-size: 70px;
+      line-height: 98%;
+    }
+    &-subtitle {
+      font-size: 30px;
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .main {
+    height: 900px;
+    &-title {
+      font-size: 84px;
+    }
+    &-subtitle {
+      font-size: 36px;
+    }
+  }
+}

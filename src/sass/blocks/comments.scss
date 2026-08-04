@@ -1,0 +1,117 @@
+.comments {
+  &-wrapper {
+    margin-top: 40px;
+    padding-bottom: 30px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow:
+      0 3px 2px 0 rgba(23, 30, 108, 0),
+      0 7px 5px 0 rgba(23, 30, 108, 0),
+      0 13px 10px 0 rgba(23, 30, 108, 0.01),
+      0 22px 18px 0 rgba(23, 30, 108, 0.01),
+      0 42px 33px 0 rgba(23, 30, 108, 0.02),
+      0 100px 80px 0 rgba(23, 30, 108, 0.04);
+    background: rgba(255, 255, 255, 0.8);
+    &-text {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 14px;
+      color: #5c5d86;
+    }
+    &_user {
+      position: relative;
+      display: flex;
+      gap: 10px;
+      &-name {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 14px;
+        color: #151645;
+        h4 {
+          font-weight: 500;
+        }
+      }
+      &::after {
+        content: "";
+        bottom: -10px;
+        position: absolute;
+        background: #d9e2f3;
+        width: 297px;
+        height: 1px;
+      }
+      &-img {
+        width: 85px;
+        height: 85px;
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .swiper_comments-scrollbar {
+    border-radius: 20px;
+    width: 100%;
+    height: 4px;
+    background: #b7ced9;
+    .swiper-scrollbar-drag {
+      height: 4px;
+      background: #214dde;
+    }
+  }
+  // }
+}
+
+@media screen and (min-width: 768px) {
+  .comments {
+    &-wrapper {
+      padding-bottom: 35px;
+    }
+    .card {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 190px;
+      &_user {
+        flex-direction: column;
+        width: 22%;
+        &::after {
+          content: "";
+          right: -10px;
+          top: -5px;
+          position: absolute;
+          background: #d9e2f3;
+          width: 1px;
+          height: 150px;
+        }
+      }
+      &-text {
+        font-size: 16px;
+        width: 74%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .comments {
+    &-wrapper {
+      padding-bottom: 70px;
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .comments {
+    &-wrapper {
+      padding-bottom: 40px;
+    }
+    .card {
+      min-height: 227px;
+      padding: 30px;
+    }
+  }
+}

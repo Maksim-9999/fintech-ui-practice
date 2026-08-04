@@ -1,0 +1,308 @@
+.about {
+}
+.flex {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    justify-content: center;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #17181a;
+    order: 1;
+  }
+  &__img {
+    min-height: 215px;
+    order: 2;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+}
+.about-data {
+  .data__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    // row-gap: 20px;
+    column-gap: 40px;
+  }
+  .data__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: calc(50% - 20px);
+
+    &-title {
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 60px;
+      text-align: center;
+      color: #214dde;
+    }
+    &-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 125%;
+      text-align: center;
+      color: #727a97;
+    }
+  }
+  .mobile-line {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 36px;
+      background: #c2c5d2;
+      right: -20px;
+    }
+  }
+}
+.ecosysstem {
+  &__wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    .infrastructure {
+      background: url(/src/img/about_us/infastructure.jpg) center center / cover
+        no-repeat;
+    }
+    .digital {
+      background: url(../../img/about_us/digital.jpg) center center / cover
+        no-repeat;
+    }
+    .ai {
+      background: url(/src/img/about_us/ai.jpg) center center/ cover no-repeat;
+    }
+  }
+  &__card {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    min-height: 281px;
+    border-radius: 20px;
+    &-title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    &-list {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .flex {
+    &__wrapper {
+      row-gap: 35px;
+    }
+    &__text {
+      row-gap: 25px;
+    }
+  }
+  .about-data {
+    .data__wrapper {
+      padding: 0 50px;
+      row-gap: 20px;
+      column-gap: 140px;
+    }
+    .data__card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      width: calc(50% - 70px);
+
+      &-title {
+        font-size: 60px;
+        line-height: 90px;
+      }
+      &-text {
+        font-size: 16px;
+        line-height: 144%;
+      }
+    }
+    .mobile-line {
+      &::after {
+        height: 71px;
+
+        right: -70px;
+      }
+    }
+  }
+  .ecosysstem {
+    &__card {
+      padding: 30px 25px;
+      gap: 15px;
+      min-height: 260px;
+      &-title {
+        font-size: 24px;
+        line-height: 36px;
+      }
+      &-list {
+        font-size: 16px;
+        line-height: 24px;
+        gap: 20px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .flex {
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 30px;
+    }
+    &__block {
+      display: flex;
+      flex-direction: row;
+      gap: 100px;
+    }
+    &__text {
+      width: 50%;
+    }
+    &__img {
+      width: 50%;
+      min-height: 215px;
+      order: 1;
+    }
+  }
+  .about-data {
+    .data__wrapper {
+      padding: 0;
+      flex-wrap: nowrap;
+      column-gap: 50px;
+    }
+    .data__card {
+      row-gap: 15px;
+
+      width: 100%;
+
+      &-title {
+        font-size: 80px;
+        line-height: 120px;
+      }
+      &-text {
+        font-size: 18px;
+        line-height: 128%;
+      }
+    }
+    .mobile-line,
+    .desctop-line {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 126px;
+        background: #c2c5d2;
+        right: -25px;
+      }
+    }
+  }
+  .ecosysstem {
+    &__wrapper {
+      margin-top: 60px;
+
+      flex-wrap: nowrap;
+    }
+    &__card {
+      padding: 30px 25px;
+      gap: 30px;
+      min-height: 441px;
+      width: 100%;
+      &-title {
+        width: 332px;
+        text-align: center;
+        font-size: 28px;
+        line-height: 42px;
+        height: 20%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .flex {
+    &__wrapper {
+      row-gap: 55px;
+    }
+    &__block {
+      gap: 150px;
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+  .about-data {
+    .data__wrapper {
+      padding: 0 25px;
+
+      column-gap: 100px;
+    }
+    .data__card {
+      &-title {
+        font-size: 96px;
+        line-height: 144px;
+      }
+      &-text {
+        font-size: 20px;
+        line-height: 115%;
+      }
+    }
+    .mobile-line,
+    .desctop-line {
+      &::after {
+        right: -50px;
+      }
+    }
+  }
+  .ecosysstem {
+    &__wrapper {
+      margin-top: 95px;
+    }
+    &__card {
+      padding: 40px 35px;
+      gap: 50px;
+      min-height: 555px;
+      width: 100%;
+      &-title {
+        font-size: 32px;
+        line-height: 48px;
+      }
+      &-list {
+        font-size: 18px;
+        line-height: 28px;
+        gap: 25px;
+      }
+    }
+  }
+}

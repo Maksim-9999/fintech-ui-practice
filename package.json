@@ -1,0 +1,32 @@
+{
+  "name": "fintech-ui-practice",
+  "version": "1.0.0",
+  "description": "Responsive multi-page corporate website for a digital solutions provider, built with HTML, SCSS, JavaScript, Vite, Swiper, and Express.",
+  "license": "ISC",
+  "author": "Maksim Duljuk",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "swiper": "^12.1.4",
+    "vite": "^8.0.11"
+  },
+  "devDependencies": {
+    "sass": "^1.99.0",
+    "vercel": "^58.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maksim-9999/fintech-ui-practice.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Maksim-9999/fintech-ui-practice/issues"
+  },
+  "homepage": "https://github.com/Maksim-9999/fintech-ui-practice#readme"
+}

@@ -1,0 +1,165 @@
+.functional {
+  &__wrapper {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 25px;
+    border-radius: 32px;
+    box-shadow:
+      0 3px 2px 0 rgba(23, 30, 108, 0.06),
+      0 7px 5px 0 rgba(23, 30, 108, 0.33);
+    border: 2px solid transparent;
+    background:
+      linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(270deg, #fff, #4d6cd1) border-box;
+    &-title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #17181a;
+    }
+    &-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: #212b38;
+    }
+  }
+}
+.insurance__modal {
+  .card {
+    padding: 35px 15px;
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+  }
+  &-btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    .btn {
+      width: 100%;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .functional {
+    &__wrapper {
+      margin-top: 50px;
+      gap: 20px;
+    }
+    &__card {
+      width: calc(50% - 10px);
+      gap: 15px;
+      padding: 30px 25px;
+      &-title {
+        font-size: 18px;
+        line-height: 27px;
+      }
+      &-text {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+  .insurance__modal {
+    .card {
+      padding: 90px;
+      &-content {
+        gap: 50px;
+      }
+      .insurance__modal-btn {
+        flex-wrap: nowrap;
+        .btn {
+          padding: 14px 40px;
+          line-height: 100%;
+        }
+      }
+    }
+    &-title {
+      font-size: 36px;
+      line-height: 54px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .functional {
+    &__card {
+      position: relative;
+      width: calc(33% - 10px);
+      z-index: 1;
+
+      &:hover {
+        box-shadow:
+          -8px -8px 20px rgba(103, 183, 248, 0.5),
+          -4px -4px 40px rgba(99, 217, 197, 0.3),
+          8px 8px 20px rgba(159, 141, 240, 0.5),
+          4px 4px 40px rgba(159, 141, 240, 0.3);
+      }
+    }
+  }
+  .insurance__modal {
+    .card {
+      padding: 90px 155px;
+      &-content {
+        gap: 55px;
+      }
+      .insurance__modal-btn {
+        .btn {
+          padding: 14px 60px;
+        }
+      }
+    }
+    &-title {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .functional {
+    &__card {
+      padding: 40px 30px;
+      &-title {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      &-text {
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+  }
+  .insurance__modal {
+    .card {
+      padding: 80px 150px;
+      &-content {
+        gap: 70px;
+      }
+      .insurance__modal-btn {
+        flex-wrap: nowrap;
+        .btn {
+          padding: 14px 45px;
+          line-height: 100%;
+          white-space: nowrap;
+        }
+      }
+    }
+    &-title {
+      font-size: 48px;
+      line-height: 72px;
+    }
+  }
+}
