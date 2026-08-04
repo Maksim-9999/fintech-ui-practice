@@ -20,6 +20,12 @@ export default defineConfig({
         privacy_policy: "privacy_policy.html",
         security_policy: "security_policy.html",
       },
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) return "vendor";
+          if (id.includes("/src/js/")) return "app";
+        },
+      },
     },
   },
 });

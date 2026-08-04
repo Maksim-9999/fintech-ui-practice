@@ -2,10 +2,6 @@ import { closeModal } from "./modal";
 
 const forms = () => {
   try {
-    const forms = document.querySelectorAll("form");
-    forms.forEach((item) => {
-      bindPostData(item);
-    });
     const showThanks = () => {
       const thanksModal = document.querySelector("[data-thanks-message]");
       thanksModal.classList.add("show");
@@ -43,7 +39,7 @@ const forms = () => {
 
         postData("/api/submit", dataObject)
           .then((res) => {
-            if (!res.ok) throw new Error("Ошибка сервера: " + res.status);
+            if (!res.ok) throw new Error("Server error: " + res.status);
             return res.json();
           })
           .then(() => {
@@ -56,6 +52,10 @@ const forms = () => {
           });
       });
     };
+    const forms = document.querySelectorAll("form");
+    forms.forEach((item) => {
+      bindPostData(item);
+    });
   } catch (e) {
     console.error(e);
   }
