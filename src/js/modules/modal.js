@@ -13,11 +13,13 @@ const openModal = (modal) => {
   paddingAdd(header, scroll);
   modal.classList.add("show");
   document.body.classList.add("popup-open");
+  paddingAdd(document.body, scroll);
 };
 const closeModal = (modal) => {
   paddingRemove(header);
   modal.classList.remove("show");
   document.body.classList.remove("popup-open");
+  paddingRemove(document.body);
 };
 const modal = () => {
   const modal = document.querySelector(".modal");
